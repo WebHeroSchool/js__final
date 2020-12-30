@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/font-face.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Game</title>
+  </head>
+  <body>
+    <main id="main">
+      <div class="menu">
+        <h2 class="menu__title">Выберите уровень сложности:</h2>
+        <p class="menu__desription">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+      </div>
+      <div class="level-list">
+        <div class="level-list__item-container" id="menu__level-container-1">
+          <div class="level-list__icon" id="menu__level-icon-1"></div>
+          <div class="level-list__level">Простой</div>
+        </div>
+        <div class="level-list__item-container" id="menu__level-container-2">
+          <div class="level-list__icon" id="menu__level-icon-2"></div>
+          <div class="level-list__level">Средний</div>
+        </div>
+        <div class="level-list__item-container" id="menu__level-container-3">
+          <div class="level-list__icon" id="menu__level-icon-3"></div>
+          <div class="level-list__level">Сложный</div>
+        </div>
+      </div>
+      <button id="menu__button">Начать игру</button>
+      <div class="menu__images">
+        <img src="images/card_back.png" alt="карта 1" class="images__bottom"/>
+        <img src="images/card_back.png" alt="карта 2" class="images__top"/>
+      </div>
+    </main>
+    <section id="level-easy">
+      <div class="card-container"><div class="level-easy__card-back"></div></div>
+      <div class="card-container"><div class="level-easy__card-back"></div></div>
+      <div class="card-container"><div class="level-easy__card-back"></div></div>
+    </section>
+    <section id="level-medium">
+      <div class="level-medium__row">
+        <div class="card-container"><div class="level-medium__card-back"></div></div>
+        <div class="card-container"><div class="level-medium__card-back"></div></div>
+        <div class="card-container"><div class="level-medium__card-back"></div></div>
+      </div>
+      <div class="level-medium__row">
+        <div class="card-container"><div class="level-medium__card-back"></div></div>
+        <div class="card-container"><div class="level-medium__card-back"></div></div>
+        <div class="card-container"><div class="level-medium__card-back"></div></div>
+    </div>
+    </section>
+    <section id="level-hard">
+      <div class="level-hard__row">
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+      </div>
+      <div class="level-hard__row">
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+        <div class="card-container"><div class="level-hard__card-back"></div></div>
+    </div>
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

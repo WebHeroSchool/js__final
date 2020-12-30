@@ -1,0 +1,243 @@
+body {
+  background-image: url("../images/Background.png");
+  color: white;
+  margin: 0;
+}
+
+#main { margin-left: 7.3vw; }
+
+.menu { margin: 13.3vh 0 6.3vh 0; }
+
+.menu__title {
+  font: 700 57px/67px 'roboto-bold';
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.menu__desription {
+  font: 400 19px/23px 'roboto-regular';
+  margin: 0;
+}
+
+.level-list__item-container {
+  display: flex;
+  align-items: center;
+  transition: opacity 1s;
+  margin-bottom: 40px;
+}
+
+.level-list__level {
+  font: 700 50px/59px 'roboto-bold';
+  margin-left: 45px;
+}
+
+.level-list__icon {
+  width: 18px;
+  height: 18px;
+  background: #D62B2E;
+  transform: rotate(45deg);
+  margin-right: 24px;
+  position: absolute;
+
+}
+
+.level-list__item-container:last-child { margin-bottom: 12vh; }
+
+#menu__button {
+  font: 700 32px/38px 'roboto-bold';
+  width: 352px;
+  height: 95px;
+  background: #D62B2E;
+  color: white;
+  border-radius: 7px;
+  transition: opacity 1s;
+}
+
+#menu__button:hover,
+.level-list__item-container:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.images__top,
+.images__bottom {
+  width: 218px;
+  height: 341px;
+}
+
+.menu__images {
+  position: absolute;
+  bottom: 10.3vh;
+  right: 4.7vw;
+  width: 450px;
+  height: 360px;
+}
+
+.images__bottom {
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  transform: rotate(11.9deg);
+  position: absolute;
+  bottom: 4vh;
+}
+
+.images__top {
+  filter: drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+  transform: rotate(39.26deg);
+  position: absolute;
+  left: 170px;
+}
+
+#level-easy {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#level-medium,
+#level-hard {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-medium__row,
+.level-hard__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 218px;
+  height: 341px;
+  margin-right: 25px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.level-easy__card-back,
+.level-medium__card-back,
+.level-hard__card-back {
+  background-image: url("../images/card_back.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card__flipping {
+  transform: rotateY(180deg);
+}
+
+.card__answer_right,
+.card__answer_wrong {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("../images/answer_right.png");
+  transform: rotateY(180deg);
+}
+
+.card__answer_right { background-image: url("../images/answer_right.png"); }
+
+.card__answer_wrong { background-image: url("../images/answer_wrong.png"); }
+
+.card-container:last-child { margin-right: 0; }
+
+.level-medium__card-back,
+.level-hard__card-back { margin-top: 25px; }
+
+.card-container:hover {
+  cursor: pointer;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+  transform: rotate(-3.08deg);
+}
+
+@media (max-width: 1040px) {
+  .card-container {
+    width: 150px;
+    height: 236px;
+    background-size: cover;
+  }
+
+  .level-medium__row,
+  .level-hard__row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 770px) {
+  .menu { width: 85vw; }
+
+  .menu__images {
+    width: 290px;
+    height: 220px;
+  }
+
+  .images__top,
+  .images__bottom {
+    width: 141px;
+    height: 220px;
+  }
+
+  .images__bottom { left: 10px; }
+
+  .images__top { left: 105px; }
+
+  .card-container {
+    width: 100px;
+    height: 157px;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 615px) {
+  .menu_images,
+  .images__top,
+  .images__bottom {
+    display: none;
+  }
+
+  #main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .menu { margin: 5vh 0 6.3vh 5vw; }
+
+  .level-list { margin-left: 5vw; }
+
+  .level-list__level {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  #menu__button {
+    align-self: center;
+    width: 300px;
+    font-size: 29px;
+  }
+
+  .menu__title {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .menu__desription {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  #level-medium,
+  #level-hard {
+    height: auto;
+    margin-top: 10px;
+  }
+}
